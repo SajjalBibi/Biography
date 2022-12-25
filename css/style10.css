@@ -1,0 +1,276 @@
+*{
+    font-family: 'poppins';
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* NAVBAR-STYLING START */
+
+  .navbar a{
+    text-decoration: none;
+  }
+  .navbar li{
+    list-style: none;
+  }
+  .navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0,0,0.1);
+    padding: 0px 3%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    display: flex;
+  }
+  header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: goldenrod;
+  }
+  header .navbar ul li{
+    position: relative;
+    float: left;
+  }
+  header .navbar ul li a{
+   font-size: 20px;
+   padding: 15px;
+   color: goldenrod;
+   display: block;
+   align-items: center;
+  }
+  header .navbar ul li a:hover{
+    background-color: goldenrod;
+    color: #fff;
+  }
+  header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: black;
+    display: none;
+  }
+  header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid goldenrod;
+  }
+  header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+  }
+  header .navbar ul li:focus-within > ul,
+  header .navbar ul li:hover > ul{
+     display: initial;
+  }
+  #menu-bar{
+    display: none;
+  }
+  header label{
+    font-size: 20px;
+    color: #378;
+    cursor: pointer;
+    display: none ;
+  }
+
+  @media(max-width:991px) {
+    header{
+      padding: 20px;
+    }
+    header label{
+      display: initial;
+    }
+    header .navbar{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: black;
+      border-top: 1px solid #999;
+      display: none;
+    }
+    header .navbar ul li{
+    width: 100%;
+    }
+    header .navbar ul li ul{
+      position: relative;
+      width: 100%;
+    }
+    header .navbar ul li ul li{
+      background: goldenrod;
+    }
+    header .navbar ul li ul li ul{
+      width: 100%;
+      left: 0;
+    }
+    #menu-bar:checked ~ .navbar{
+      display: initial;
+    }
+  }
+  /* NAVBAR-STYLING END */
+  .btn{
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 0;
+    padding: 10px 25px;
+}
+.btn:hover{
+    color: #fff;
+    border: 1px solid goldenrod;
+    background-color: goldenrod;
+}
+/* HEADING STYLING START */
+h1{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  /* HEADING STYLING END */
+   /* video{
+    width: 45vw;
+    border-radius: 100px;
+   } */
+  /*--- ScrollFade Specific ---*/
+
+.scrollFade {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.scrollFade--hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.scrollFade--visible {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.scrollFade--animate {
+	transition: opacity 0.4s ease-in-out;
+}
+
+/*------*/
+/* LOADER */
+.loading {
+ 
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: -1; 
+  opacity: 0;  
+  animation-delay: 0;
+  animation-name: loading;
+  animation-duration: 2.4s;
+  animation-fill-mode: fowards;
+  animation-iteration-count: 1; 
+  animation-timing-function: ease-out;
+  
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.loading .image {
+  width: auto;
+  height: auto;
+  border-radius: 200px;
+  overflow: hidden;
+  
+  animation: rotation 3s linear infinite; 
+  transform-origin: center; 
+}
+
+.loading .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+@keyframes loading {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  overflow-x  : hidden;
+}
+ 
+/* FOOTER STYLING START */
+#footer{
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#footer li{
+  list-style: none;
+}
+#footer a{
+  text-decoration: none;
+  color: goldenrod;
+}
+#footer a:hover{
+  color: #fff;
+}
+#footer h4{
+  color: goldenrod;
+  text-decoration: underline;
+  text-align: center;
+}
+#footer .fa-facebook{
+margin: 20px;
+}
+#footer .fa-twitter{
+margin: 20px;
+}
+#footer .fa-instagram{
+margin: 20px;
+}
+#footer .fa-linkedin{
+margin: 20px;
+}
+/* #footer img{
+  padding: 40px 100px;
+} */
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 8px goldenrod; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 10px rgba(224, 177, 49, 0.788); 
+}

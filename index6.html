@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="shortcut icon" href="images/main-logo.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>    
+
+    <title>Introduction of Ada Lovelace </title>
+    <link rel="stylesheet" href="css/style7.css">
+</head>
+
+<style>
+    .loading {
+ 
+ position: fixed;
+ width: 100%;
+ height: 100vh;
+ background-color: #fff;
+ z-index: -1; 
+ opacity: 0;  
+ animation-delay: 0;
+ animation-name: loading;
+ animation-duration: 2.4s;
+ animation-fill-mode: fowards;
+ animation-iteration-count: 1; 
+ animation-timing-function: ease-out;
+ 
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.loading .image {
+ width: auto;
+ height: auto;
+ border-radius: 200px;
+ overflow: hidden;
+ 
+ animation: rotation 3s linear infinite; 
+ transform-origin: center; 
+}
+
+.loading .image img {
+ width: 200px;
+ height: 200px;
+ object-fit: cover;
+}
+
+
+@keyframes loading {
+ from {
+   opacity: 1;
+   z-index: 100;
+ }
+ 80% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+   z-index: -1;
+ }
+}
+
+
+@keyframes rotation {
+ from {
+   transform: rotate(0);
+ }
+ to {
+   transform: rotate(360deg);
+ }
+}
+</style>
+<div class="loading">
+    <div class="image">
+    <img src="">    
+    </div>
+  </div>
+
+<body class="">
+
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+        <!-- Header/Home -->
+        <header class="w3-container w3-padding-32 w3-center " id="home">
+            <h1 id="animated-text" class="w3-jumbo left"><span class="w3-hide-small">I'm</span> Ada Lovelace </h1>
+            <br>
+            <p></p>
+            <img src="./images/PEOPLE5.jpg" alt="boy" class="w3-image img-fluid rounded-circle" style="box-shadow: 0px 0px 50px 10px goldenrod">
+        </header>
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h1 class="w3-text">Ada Lovelace</h1>
+            <hr style="width:200px" class="w3-opacity">
+
+            <p>Ada Lovelace was one of the first women to become involved in the technology of computers. Born Augusta
+                Ada Byron on 10 December 1815 in London, Ada was the daughter of Lord Byron, the famous poet. The
+                tempestuous Lord Byron married Annabella Millbanke in 1815, but their marriage was very unhappy, and the
+                two separated just one month after their child, Augusta Ada, was born.</p>
+
+            <p>Her mother, fearful that young Ada had inherited her father’s tempestuous character, had her tutored in
+                mathematics and music in an attempt to counter any tendencies toward becoming a poet. In fact, Ada
+                inherited both her father’s intelligence and his psychological imbalance. Ada excelled in mathematics,
+                but her education was sometimes interrupted by a mysterious chronic illness, which may have been
+                psychosomatic. For instance, a severe “attack” at age 14 left her unable to walk for almost three years.
+            </p>
+
+            <p>Things changed for Ada when, at age 18, she heard a lecture by Charles Babbage, an English mathematician
+                who had recently developed the idea for a mechanical calculator that he called the Difference Engine.
+                The next year, she was married to William King, the future Lord Lovelace. Two years later, now using her
+                husband’s new title, she began to correspond with Babbage as Countess Ada Lovelace. Then in 1844, she
+                volunteered to translate for Babbage an article written in Italian about the Difference Engine. Babbage,
+                impressed with her work, encouraged her to append her own comments to the translation, which she did. In
+                this way, Lovelace publicly contributed to the ongoing development of computing technology. Her notes
+                included instructions for using the Difference Engine to calculate so-called Bernoulli numbers, a feat
+                that has earned her the title of the first computer programmer.</p>
+
+            <p>Meanwhile, Ada’s life was not always happy. As her mother feared, Ada was afflicted by the same
+                psychological problems that had made her father so difficult. She suffered a mental breakdown followed
+                by chronic problems with breathing and eating. She saw a doctor about these problems, but his regimen of
+                medicines, which included addictive drugs such as heroin and morphine, caused her to suffer delusions.
+                She beat these addictions, and the delusions ended, but she then became obsessed with betting on horse
+                races, and in the 1840s accumulated a considerable gambling debt. At the height of all this, she was
+                struck by cancer and died at the early age of 36 on 27 November 1852.
+            </p>
+
+
+
+
+
+
+        </div>
+
+        <!-- Testimonials -->
+        <h3 class="w3-padding-24 w3-text-dark">ABOUT </h3>
+        <img src="./images/PEOPLE5.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+        <p><span class="w3-large w3-margin-right"></span> Ada lovelac</p>
+        <p>Born: 1815/12/10,London, UK<br>Died: 1852/11/27,</p><br>
+        <p><span class="w3-large w3-margin-right">Fields of study:Mathematics, Computing</span></p>
+
+
+        <!-- End About Section -->
+    </div>
+
+    <!-- photo section start -->
+    <div class="w3-padding-64 w3-content" id="photos">
+        <h2 class="w3-text-dark">Photos</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <br><br>
+
+        <!-- The grid: four columns -->
+        <div class="row8">
+            <div class="column3 col-3">
+                <img id="one" src="./images/ada4.webp" class="img-fluid" alt="Nature" onclick="myFunction(this);">
+            </div>
+            <div class="column3 col-3">
+                <img id="two" src="./images/ada3.jpg" class="img-fluid" alt="Snow" onclick="myFunction(this);">
+            </div>
+            <div class="column3 col-3">
+                <img id="three" src="./images/ada2.jpg" class="img-fluid" alt="Mountains" onclick="myFunction(this);">
+            </div>
+            <div class="column3 col-3">
+                <img id="four" src="./images/ada1.jpg" class="img-fluid" alt="Lights" onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <!-- The expanding image container -->
+        <div class="container8">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
+        <!--  -->
+        <!-- END PAGE CONTENT -->
+    </div>
+    <script>
+        // card
+        function myFunction(imgs) {
+            // Get the expanded image
+            var expandImg = document.getElementById("expandedImg");
+            // Get the image text
+            var imgText = document.getElementById("imgtext");
+            // Use the same src in the expanded image as the image being clicked on from the grid
+            expandImg.src = imgs.src;
+            // Use the value of the alt attribute of the clickable image as text inside the expanded image
+            imgText.innerHTML = imgs.alt;
+            // Show the container element (hidden with CSS)
+            expandImg.parentElement.style.display = "block";
+        }
+         // top to bottom //
+
+ window.onscroll = () =>
+ {
+   toggleTopButton();
+ }
+ function scrollToTop(){
+   window.scrollTo({top:0,behavior:'smooth'});
+ }
+ function toggleTopButton(){
+   if(document.body.scrollTop>20||
+     document.documentElement.scrollTop>20
+     ){
+       document.getElementById('back-to-up').classList.remove('d-none');
+     }else{
+       document.getElementById('back-to-up').classList.add('d-none');
+     }
+ }
+    </script>
+    <!-- </body> -->
+    <button style="margin-bottom: 80px !important; margin: right 13px !important; " class="btn btn-warning px-3 py-2 position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up"> <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

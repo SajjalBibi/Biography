@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script> 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>   
+    <link rel="stylesheet" href="css/style10.css">
+    <link rel="shortcut icon" href="images/main-logo.png" type="image/x-icon">
+    <title>Books</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins';
+  }
+    body {
+  padding-top: 80px;
+}
+
+.show-cart li {
+  display: flex;
+}
+.card {
+  margin-bottom: 20px;
+  border: none;
+  background-color: transparent;
+}
+.card-img-top {
+  width: 250px;
+  height: 250px;
+  align-self: center;
+}
+.card-block{
+  text-align: center;
+}
+</style>
+<div class="loading">
+  <div class="image">
+  <img src="">    
+  </div>
+</div>
+<body>
+    <!-- NAVBAR START -->
+   
+    <header>
+      <a href="" class="logo"><img src="images/main-logo.png" id="logo" alt="logo"></a>
+      <input type="checkbox" id="menu-bar">
+      <label for="menu-bar">Menu</label>
+       <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Biography</a>
+              <ul>
+                  <li><a href="index1.html">Most Famouse Scientits</a></li>
+              </ul>
+          </li>
+          <li><a href="index8.html">Research</a>
+          <ul>
+            <li><a href="index30.html">Award & Honour</a></li>
+          </ul>
+          </li>
+          <li><a href="index25.html">Achievement</a>
+          <ul>
+           <li><a href="index26.html">Working</a></li>
+           <!-- <li><a href="#">Working</a></li> -->
+          </ul>
+      </li>
+          <li><a href="index27.html">Books</a></li>
+          <li><a href="index28.html">Reference </a></li>
+          <li><a href="index29.html">Contact us </a></li>
+          <li><a href="#"><i class="fa fa-moon" onclick="btnclick()" id="btnn"></i> </a></li>
+          <li><a href="#"><i class="fa fa-shopping-cart" data-toggle="modal" data-target="#cart">(<span class="total-count"></span>)</i></a></li>
+
+        </ul>
+       </nav>
+  </header>
+  <!-- NAVBAR END -->
+    <!-- Nav -->
+<!-- <nav class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+    <div class="row">
+        <div class="col">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count"></span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+    </div>
+</nav> -->
+
+
+<!-- Main -->
+<div class="container ">
+    <div class="row item--wide scrollFade">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart1.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Infinite</h4>
+    <p class="card-text">Price: $0.5</p>
+    <a href="#" data-name="Infinite" data-price="0.5" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart2.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Deeply</h4>
+    <p class="card-text">Price: $1.5</p>
+    <a href="#" data-name="Deeply" data-price="1.5" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart3.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Success</h4>
+    <p class="card-text">Price: $1.25</p>
+    <a href="#" data-name="Success" data-price="1.25" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart4.webp" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">History</h4>
+    <p class="card-text">Price: $2.8</p>
+    <a href="#" data-name="History" data-price="2.8" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="row item--wide scrollFade">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart5.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Breath</h4>
+    <p class="card-text">Price: $11.5</p>
+    <a href="#" data-name="Breath" data-price="11.5" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#"  class="add-to-cart btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart6.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Ocean</h4>
+    <p class="card-text">Price: $15.5</p>
+    <a href="#" data-name="Ocean" data-price="15.5" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart7.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title"> Universe</h4>
+    <p class="card-text">Price: $1.25</p>
+    <a href="#" data-name=" Universe" data-price="1.25" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart8.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Scientist</h4>
+    <p class="card-text">Price: $0.35</p>
+    <a href="#" data-name="Scientist" data-price="0.35" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="row item--wide scrollFade">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart9.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">TrurScience</h4>
+    <p class="card-text">Price: $0.35</p>
+    <a href="#" data-name="TrurScience" data-price="0.35" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart10.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Life</h4>
+    <p class="card-text">Price: $1.35</p>
+    <a href="#" data-name="Life" data-price="1.35" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart11.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Exploring</h4>
+    <p class="card-text">Price: $1.3</p>
+    <a href="#" data-name="Exploring" data-price="1.3" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/add-cart12.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Philosphy</h4>
+    <p class="card-text">Price: $12.3</p>
+    <a href="#" data-name="Philosphy" data-price="12.3" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="row item--wide scrollFade">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book1.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">The-World</h4>
+    <p class="card-text">Price: $21</p>
+    <a href="#" data-name="The-World" data-price="21" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#"  class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book2.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Begining-To-End</h4>
+    <p class="card-text">Price: $3.0</p>
+    <a href="#" data-name="Begining-To-End" data-price="3.0" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book3.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Uncommon</h4>
+    <p class="card-text">Price: $1.2</p>
+    <a href="#" data-name="Uncommon" data-price="1.2" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book4.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Relativity</h4>
+    <p class="card-text">Price: $1.35</p>
+    <a href="#" data-name="Relativity" data-price="1.35" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class=" btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+    </div>
+    <div class="row item--wide scrollFade">
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book6.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">End-Of-Things</h4>
+    <p class="card-text">Price: $8.0</p>
+    <a href="#" data-name="End-Of-Things" data-price="8.0" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#"  class="add-to-cart btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/bookno7.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Tesla</h4>
+    <p class="card-text">Price: $0.12</p>
+    <a href="#" data-name="Tesla" data-price="0.12" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="add-to-cart btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book9.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Gluck</h4>
+    <p class="card-text">Price: $1.1</p>
+    <a href="#" data-name="Gluck" data-price="1.1" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="add-to-cart btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card" >
+  <img class="card-img-top" src="images/book8.jpg" alt="Card image cap">
+  <div class="card-block ">
+    <h4 class="card-title">Cutting-The-Cord</h4>
+    <p class="card-text">Price: $0.3</p>
+    <a href="#" data-name="Cutting-The-Cord" data-price="0.3" class="add-to-cart btn "><i class="fa fa-shopping-cart"></i></a>
+    <a href="#" class="add-to-cart btn "><i class="fa fa-heart"></i></a>
+  </div>
+</div>
+      </div>
+    </div>
+</div>
+ <!--NEWSLETTER SECTION START -->
+ <div class="container item--wide scrollFade" id="newsletter">
+  <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+       <h1 class="text-center">
+          Subscribe Our Newsletter
+       </h1>
+       <p>Don't miss out on your discounts. Subscribe to our
+          email newsletter to get the best offers, discounts,
+          coupons,gifts and much more.</p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-12  m-auto">
+          <form action="" class="d-flex">
+            <input type="email" name="" class="form-control" placeholder="Enter email here" id="">
+            <button  type="button" class="btn btn-dark">Subscribe</button>
+          </form>  
+        </div>
+  </div>
+</div>
+<br><br>
+<section id="footer"> 
+  <div class="container item--wide scrollFade" >
+      <div class="row">
+          <div class="col-lg-1">
+          <img src="images/main-logo.png" id="footer-logo" alt="logo">
+  </div>
+          <div class="col-lg-5 col-md-4 col-sm-4 col-12">
+              <p style="color: goldenrod;font-family: sans-serif; ">A biography is simply the story of a real person's life. It could be about a person who is still alive, someone who lived centuries ago, someone who is globally famous, an unsung hero forgotten by history, or even a unique group of people.</p>
+              
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 col-12">
+              <div class="row" >
+                  <h4>Useful Links</h4>
+  
+                  <div class="col-lg-6 col-md-12">
+                      <ul >
+                          <li><a href="#">Biography</a></li>
+                          <li><a href="#">Research</a></li>
+                          <li><a href="#">Achievements</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                      <ul>
+                          <li><a href="#">Books</a></li>
+                          <li><a href="#">Reference</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 col-12" id="social-links">
+                  <h4>Follow Us</h4>
+                  <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+                  <span><a href="#"><i class="fa fa-twitter"></i></a></span>
+                  <span><a href="#"><i class="fa fa-instagram"></i></a></span>
+                  <span><a href="#"><i class="fa fa-linkedin"></i></a></span>
+          </div>
+      </div>
+      <hr>
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+              <p style="color: goldenrod;" >copyright @ 2022 - The Wishing Juniors <i class="fa fa-star"></i></p>
+          </div>
+      </div>
+  </div>
+  </section>
+<!-- FOOTER SECTION END -->
+  
+ <!-- Modal 1-->
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div>Total price: $<span class="total-cart"></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="#"><button type="button" class="btn btn-primary">Order now</button></a>
+      </div>
+    </div>
+  </div>
+</div> 
+<button style="margin-bottom: 80px !important; margin: right 13px !important; " class="btn btn-warning px-3 py-2 position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up"> <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/index2.js"></script>
+</body>
+</html>

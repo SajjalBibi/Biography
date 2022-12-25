@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- card link -->
+    <link rel="stylesheet" href="css/style10.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>History</title>
+    <link rel="shortcut icon" href="images/main-logo.png" type="image/x-icon">
+    <style>
+        body {
+            /* font-family: 'Barlow', sans-serif; */
+            font-family: 'poppins';
+        }
+/*--- ScrollFade Specific ---*/
+
+.scrollFade {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.scrollFade--hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.scrollFade--visible {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.scrollFade--animate {
+	transition: opacity 0.4s ease-in-out;
+}
+
+/*------*/
+        .pad0 {
+            padding: 0px;
+        }
+
+        .bg_black {
+            background: #000;
+        }
+
+        .block-blog {
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: rgba(226, 223, 223, 0.61);
+        }
+
+        .transperent_block {
+            padding: 0px;
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .transperent_block img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .transperent_block:hover .black_hover_block {
+            opacity: 1;
+            transform: translateY(-150px);
+            -webkit-transform: translateY(-150px);
+            -moz-transform: translateY(-150px);
+            -ms-transform: translateY(-150px);
+            -o-transform: translateY(-150px);
+        }
+
+        .transperent_block img {
+            z-index: 4;
+        }
+
+        .transperent_block .black_hover_block {
+            position: absolute;
+            bottom: 3%;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+        }
+
+        .transperent_block:hover .black_hover_block,
+        .black_hover_block:hover {
+            bottom: 30%;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .transperent_block .blur {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 400px;
+            z-index: 5;
+            position: absolute;
+            width: 100%;
+        }
+
+        .transperent_block .black_hover_block_text {
+            z-index: 10;
+            color: #fff;
+            position: absolute;
+            height: 400px;
+            text-align: center;
+            top: -20px;
+            width: 100%;
+
+        }
+
+        .block_header {
+            margin-top: 5px;
+        }
+
+        .black_hover_block_text i:hover {
+            color: #77132f;
+        }
+
+        .black_hover_block_text i {
+            padding: 10px 10px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .black_hover_block_text i:hover {
+            color: #ffffffa6
+        }
+
+        .black_hover_block_text:hover .titl-h5 {
+            background-color: rgba(119, 19, 47, 0.60);
+        }
+
+        .titl-h5 {
+            border-top: 2px solid #77132f;
+            border-bottom: 2px solid #77132f;
+            padding: 10px;
+            margin-top: 0px;
+            line-height: 20px;
+            text-transform: uppercase;
+        }
+
+        .btn-pink {
+            background-color: #77132f;
+            color: #fff;
+            border: 4px solid #77132f;
+        }
+
+        .btn-pink:hover {
+            color: #fff;
+            background-color: #6f0f2a9e;
+            border: 4px solid #6f0f2a4e;
+        }
+
+        .btn-sm {
+            margin-top: 10px;
+        }
+
+        .black_hover_block_text li:hover {
+            background-color: #77132f;
+            cursor: pointer;
+            color: #fff;
+            width: 33.34%;
+        }
+
+        .black_hover_block_text li {
+            list-style: none;
+            border: none !important;
+        }
+        /* LEFT TO RIGHT ANIMATION */
+.left{
+    animation: fadeinleft 3s ease-in-out;
+  }
+  @keyframes fadeinleft{
+      from{
+          opacity: 0;
+          transform: translateX(-300px);
+      }
+      to{
+          opacity: 1;
+      }
+  }
+  .right{
+      animation: fadeinright 5s ease-in-out;
+  }
+  @keyframes fadeinright{
+      from{
+          opacity: 0;
+          transform: translateX(300px);
+      }
+      to{
+          opacity: 1;
+      }
+  }
+  /* ANIMATED TEXT END */
+  
+  #animated-text {
+    text-align: center;
+    animation: ani 3s;
+  }
+  
+  @keyframes ani {
+    from{
+        letter-spacing: 30px;
+        filter: blur(5px);
+        opacity: 0;
+    }
+    to{
+        letter-spacing: 0;
+        filter: blur(0);
+        opacity: 1px;
+    }
+  }
+  /* ANIMATED TEXT END */
+/* text shadow */
+  h1{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  h2{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  h3{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  h4{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  h5{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  h6{
+    text-shadow: 3px 3px 5px black;
+    color: goldenrod;
+  }
+  /* text shadow end */
+  .transperent_block {
+    box-shadow: 0px -1px 15px 8px #a77b0e;
+}
+
+
+/* HEADING STYLING START */
+h1{
+  text-shadow: 3px 3px 5px black;
+  color: goldenrod;
+}
+/* HEADING STYLING END */
+footer{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: black;
+}
+video{
+  width: 45vw;
+  border-radius: 100px;
+}
+hr{
+  color: goldenrod;
+}
+footer li{
+  list-style: none;
+
+}
+footer a{
+  text-decoration: none;
+}
+footer ul li a{
+  color: goldenrod;
+
+}
+footer ul li a:hover{
+  color: #fff;
+
+}
+footer ul{
+  display: flex;
+  justify-content: space-between;
+
+}
+.btn{
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 0;
+    padding: 10px 25px;
+}
+.btn:hover{
+    color: #fff;
+    border: 1px solid goldenrod;
+    background-color: goldenrod;
+}
+footer span{
+  margin-left: 20px;
+}
+*{
+    font-family: 'poppins';
+    padding: 0 ;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* NAVBAR-STYLING START */
+
+  .navbar a{
+    text-decoration: none;
+  }
+  .navbar li{
+    list-style: none;
+  }
+  .navbar{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 10px rgb(0,0,0.1);
+    padding: 0px 3%;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    display: flex;
+  }
+  header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: goldenrod;
+  }
+  header .navbar ul li{
+    position: relative;
+    float: left;
+  }
+  header .navbar ul li a{
+   font-size: 20px;
+   padding: 15px;
+   color: goldenrod;
+   display: block;
+   align-items: center;
+  }
+  header .navbar ul li a:hover{
+    background-color: goldenrod;
+    color: #fff;
+  }
+  header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: black;
+    display: none;
+  }
+  header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid goldenrod;
+  }
+  header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+  }
+  header .navbar ul li:focus-within > ul,
+  header .navbar ul li:hover > ul{
+     display: initial;
+  }
+  #menu-bar{
+    display: none;
+  }
+  header label{
+    font-size: 20px;
+    color: #378;
+    cursor: pointer;
+    display: none ;
+  }
+
+  @media(max-width:991px) {
+    header{
+      padding: 20px;
+    }
+    header label{
+      display: initial;
+    }
+    header .navbar{
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: goldenrod;
+      border-top: 1px solid #999;
+      display: none;
+    }
+    header .navbar ul li{
+    width: 100%;
+    }
+    header .navbar ul li ul{
+      position: relative;
+      width: 100%;
+    }
+    header .navbar ul li ul li{
+      background: #999;
+    }
+    header .navbar ul li ul li ul{
+      width: 100%;
+      left: 0;
+    }
+    #menu-bar:checked ~ .navbar{
+      display: initial;
+    }
+  }
+  /* NAVBAR-STYLING END */
+  .container {
+    margin-top: 62px;
+}
+.loading {
+ 
+ position: fixed;
+ width: 100%;
+ height: 100vh;
+ background-color: #fff;
+ z-index: -1; 
+ opacity: 0;  
+ animation-delay: 0;
+ animation-name: loading;
+ animation-duration: 2.4s;
+ animation-fill-mode: fowards;
+ animation-iteration-count: 1; 
+ animation-timing-function: ease-out;
+ 
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+
+.loading .image {
+ width: auto;
+ height: auto;
+ border-radius: 200px;
+ overflow: hidden;
+ 
+ animation: rotation 3s linear infinite; 
+ transform-origin: center; 
+}
+
+.loading .image img {
+ width: 200px;
+ height: 200px;
+ object-fit: cover;
+}
+
+
+@keyframes loading {
+ from {
+   opacity: 1;
+   z-index: 100;
+ }
+ 80% {
+   opacity: 1;
+ }
+ 100% {
+   opacity: 0;
+   z-index: -1;
+ }
+}
+
+
+@keyframes rotation {
+ from {
+   transform: rotate(0);
+ }
+ to {
+   transform: rotate(360deg);
+ }
+}
+    </style>
+     <div class="loading">
+      <div class="image">
+      <img src="">    
+      </div>
+    </div>
+</head>
+
+<body>
+   <!-- NAVBAR START -->
+   <header>
+    <a href="" class="logo"><img src="images/main-logo.png" id="logo" alt="logo"></a>
+    <input type="checkbox" id="menu-bar">
+    <label for="menu-bar">Menu</label>
+     <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Biography</a>
+            <ul>
+                <li><a href="index1.html">Most Famouse Scientits</a></li>
+            </ul>
+        </li>
+        <li><a href="index8.html">Research</a>
+        <ul>
+          <li><a href="index30.html">Award & Honour</a></li>
+        </ul>
+        </li>
+        <li><a href="index25.html">Achievement</a>
+        <ul>
+         <li><a href="index26.html">Working</a></li>
+         <!-- <li><a href="#">Working</a></li> -->
+        </ul>
+    </li>
+        <li><a href="index27.html">Books</a></li>
+        <li><a href="index28.html">Reference </a></li>
+        <li><a href="index29.html">Contact us </a></li>
+        <li><a href="#"><i class="fa fa-moon" onclick="btnclick()" id="btnn"></i> </a></li>
+        <li><a href="#"><i class="fa fa-sun" onclick="btnclick()" id="btnnn"></i> </a></li>
+
+      </ul>
+     </nav>
+</header>
+<!-- NAVBAR END -->
+<br><br>
+
+  <!-- <br><br> -->
+    <div class="container item--wide scrollFade">
+        <h1 id="animated-text" class="left">HISTORY</h1>
+        <br><br>
+        <P class="text-center">A comprehensive section chronicling the discovery of nuclear fission, the race for the atomic bomb, <br> the development of the hydrogen bomb and the ensuing Cold War and beyond.</P>
+        <br><br>
+    </div>
+<!-- cards -->
+<div class="container item--wide scrollFade">
+    <div class="row">
+  
+    <div class="col-lg-4 botm-margn ">
+          <div class="transperent_block " style="background-color:#fec117;">
+            
+                <img src="./images/h1.jpg" class="img-responsive" alt="1">
+                
+                <div class="black_hover_block">
+                   <div class="blur"></div>
+                      <div class="black_hover_block_text">
+                      
+                        
+                             <h5 class="titl-h3 bg-dark">The First Pile</h5>
+                            <p>On December 2, 1942, in a racquets court underneath the West Stands of Stagg Field at the University of Chicago, a team of scientists led by Enrico Fermi
+                                 created man's first controlled, self-sustaining nuclear chain reaction.</p>
+                            <a class=" btn btn-default btn-sm btn-warning" href="#">READ MORE</a> 
+                           <div class="block_header">
+                      <a href="#"><i class="fa fa-facebook" data-toggle="tooltip"  title="Facebook" data-original-title="Facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter" data-toggle="tooltip"  title="Twitter" data-original-title="Twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip"  title="Google" data-original-title="Google Plus"></i></a>
+                      <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" title="Youtube" data-original-title="Youtube"></i></a>
+                      <a href="#"><i class="fa fa-github" data-toggle="tooltip" title="Github" data-original-title="Github"></i></a>
+                      <a href="#"><i class="fa fa-linkedin" data-toggle="tooltip"  title="Linkedin" data-original-title="Linkedin"></i></a>
+                      <a href="#"><i class="fa fa-flickr" data-toggle="tooltip"  title="Flickr" data-original-title="Flickr"></i></a>
+                      <a href="#"><i class="fa fa-skype" data-toggle="tooltip"  title="Skype" data-original-title="Skype"></i></a>
+                    </div> 
+                              
+                            </div>
+                    </div>
+                      </div>
+        </div>
+        <div class="col-lg-4 botm-margn ">
+          <div class="transperent_block " style="background-color:#fec117;">
+                <img src="./images/h2.jpg" class="img-responsive" alt="">
+                
+                <div class="black_hover_block">
+                   <div class="blur"></div>
+                      <div class="black_hover_block_text">
+                      
+                        <h5 class="titl-h3 bg-dark"> Atomic Bomb</h5>
+                            <p>On July 16, 1945 the world changed with the explosion of the first atomic bomb. The explosion took place at Trinity Site which is on what is now White Sands Missile Range. Trinity Site is a national historic landmark which is open to the public twice a year.</p>
+                            <a class=" btn btn-default btn-sm btn-warning" href="./index.html">READ MORE</a> 
+                           <div class="block_header">
+                      <a href="#"><i class="fa fa-facebook" data-toggle="tooltip"  title="Facebook" data-original-title="Facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter" data-toggle="tooltip"  title="Twitter" data-original-title="Twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip"  title="Google" data-original-title="Google Plus"></i></a>
+                      <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" title="Youtube" data-original-title="Youtube"></i></a>
+                      <a href="#"><i class="fa fa-github" data-toggle="tooltip" title="Github" data-original-title="Github"></i></a>
+                      <a href="#"><i class="fa fa-linkedin" data-toggle="tooltip"  title="Linkedin" data-original-title="Linkedin"></i></a>
+                      <a href="#"><i class="fa fa-flickr" data-toggle="tooltip"  title="Flickr" data-original-title="Flickr"></i></a>
+                      <a href="#"><i class="fa fa-skype" data-toggle="tooltip"  title="Skype" data-original-title="Skype"></i></a>
+                    </div> 
+                              
+                            </div>
+                    </div>
+                      </div>
+        </div>
+        <div class="col-lg-4 botm-margn ">
+          <div class="transperent_block " style="background-color:#fec117;">
+                <img src="./images/h3.jpg" class="img-responsive" alt="3">
+                
+                <div class="black_hover_block">
+                   <div class="blur"></div>
+                      <div class="black_hover_block_text">
+                    
+                        
+                        <h5 class="titl-h3 bg-dark"> Hydrogen Bomb</h5>
+                            <p>
+                                World War II's end signified the beginning of the race to develop
+                                 a weapon even more potent than the atomic bomb: the hydrogen bomb
+                            </p>
+                            <a class="btn btn-default btn-sm btn-warning" href="./index.html">READ MORE</a> 
+                           <div class="block_header">
+                      <a href="#"><i class="fa fa-facebook" data-toggle="tooltip"  title="Facebook" data-original-title="Facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter" data-toggle="tooltip"  title="Twitter" data-original-title="Twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip"  title="Google" data-original-title="Google Plus"></i></a>
+                      <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" title="Youtube" data-original-title="Youtube"></i></a>
+                      <a href="#"><i class="fa fa-github" data-toggle="tooltip" title="Github" data-original-title="Github"></i></a>
+                      <a href="#"><i class="fa fa-linkedin" data-toggle="tooltip"  title="Linkedin" data-original-title="Linkedin"></i></a>
+                      <a href="#"><i class="fa fa-flickr" data-toggle="tooltip"  title="Flickr" data-original-title="Flickr"></i></a>
+                      <a href="#"><i class="fa fa-skype" data-toggle="tooltip"  title="Skype" data-original-title="Skype"></i></a>
+                    </div> 
+                              
+                            </div>
+                    </div>
+                      </div>
+        </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="container item--wide scrollFade">
+    <div class="row">
+  
+    <div class="col-lg-4 botm-margn ">
+          <div class="transperent_block " style="background-color:#fec117;">
+                <img src="./images/h4.jpg" class="img-responsive" alt="">
+                
+                <div class="black_hover_block">
+                   <div class="blur"></div>
+                      <div class="black_hover_block_text">
+                     
+                        
+                             <h5 class="titl-h3 bg-dark">The British Mission</h5>
+                            <p>News of the discovery in early 1939 of neutron-induced fission in uranium immediately prompted ideas in the United Kingdom and elsewhere not only of a
+                                 controlled fission chain reaction but also of an uncontrolled, explosive chain reaction.</p>
+                            <a class="btn btn-default btn-sm btn-warning" href="./index.html">READ MORE</a> 
+                           <div class="block_header">
+                      <a href="#"><i class="fa fa-facebook" data-toggle="tooltip"  title="Facebook" data-original-title="Facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter" data-toggle="tooltip"  title="Twitter" data-original-title="Twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip"  title="Google" data-original-title="Google Plus"></i></a>
+                      <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" title="Youtube" data-original-title="Youtube"></i></a>
+                      <a href="#"><i class="fa fa-github" data-toggle="tooltip" title="Github" data-original-title="Github"></i></a>
+                      <a href="#"><i class="fa fa-linkedin" data-toggle="tooltip"  title="Linkedin" data-original-title="Linkedin"></i></a>
+                      <a href="#"><i class="fa fa-flickr" data-toggle="tooltip"  title="Flickr" data-original-title="Flickr"></i></a>
+                      <a href="#"><i class="fa fa-skype" data-toggle="tooltip"  title="Skype" data-original-title="Skype"></i></a>
+                    </div> 
+                              
+                            </div>
+                    </div>
+                      </div>
+        </div>
+        <div class="col-lg-4 botm-margn ">
+          <div class="transperent_block " style="background-color:#fec117;">
+                <img src="./images/h5.jpg" class="img-responsive" alt="">
+                
+                <div class="black_hover_block">
+                   <div class="blur"></div>
+                      <div class="black_hover_block_text">
+                     
+                        
+                        <h5 class="titl-h3 bg-dark">The Cuban Missile Crisis</h5>
+                            <p>On October 15, 1962, the Soviet Union was discovered attempting to install nuclear missiles in Cuba. These missiles would have been capable of quickly
+                                 reaching the United States. President Kennedy responded with a naval blockade. </p>
+                            <a class=" btn btn-default btn-sm btn-warning" href="./index.html">READ MORE</a> 
+                           <div class="block_header">
+                      <a href="#"><i class="fa fa-facebook" data-toggle="tooltip"  title="Facebook" data-original-title="Facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter" data-toggle="tooltip"  title="Twitter" data-original-title="Twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip"  title="Google" data-original-title="Google Plus"></i></a>
+                      <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" title="Youtube" data-original-title="Youtube"></i></a>
+                      <a href="#"><i class="fa fa-github" data-toggle="tooltip" title="Github" data-original-title="Github"></i></a>
+                      <a href="#"><i class="fa fa-linkedin" data-toggle="tooltip"  title="Linkedin" data-original-title="Linkedin"></i></a>
+                      <a href="#"><i class="fa fa-flickr" data-toggle="tooltip"  title="Flickr" data-original-title="Flickr"></i></a>
+                      <a href="#"><i class="fa fa-skype" data-toggle="tooltip"  title="Skype" data-original-title="Skype"></i></a>
+                    </div> 
+                              
+                            </div>
+                    </div>
+                      </div>
+        </div>
+        <div class="col-lg-4 botm-margn ">
+          <div class="transperent_block " style="background-color:#fec117;">
+                <img src="./images/h6.jpg" class="img-responsive" alt="6">
+                
+                <div class="black_hover_block">
+                   <div class="blur"></div>
+                      <div class="black_hover_block_text">
+                    
+                        
+                        <h5 class="titl-h3 bg-dark">Manhattan Project Signature Facilities</h5>
+                            <p>Following is the list of the Department of Energy's Manhattan Project "Signature Facilities" approved by the Departmental 
+                                Corporate Board on Historic Preservation in December 1999. </p>
+                            <a class="btn btn-default btn-sm btn-warning" href="./index.html">READ MORE</a> 
+                           <div class="block_header">
+                      <a href="#"><i class="fa fa-facebook" data-toggle="tooltip"  title="Facebook" data-original-title="Facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter" data-toggle="tooltip"  title="Twitter" data-original-title="Twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus" data-toggle="tooltip"  title="Google" data-original-title="Google Plus"></i></a>
+                      <a href="#"><i class="fa fa-youtube" data-toggle="tooltip" title="Youtube" data-original-title="Youtube"></i></a>
+                      <a href="#"><i class="fa fa-github" data-toggle="tooltip" title="Github" data-original-title="Github"></i></a>
+                      <a href="#"><i class="fa fa-linkedin" data-toggle="tooltip"  title="Linkedin" data-original-title="Linkedin"></i></a>
+                      <a href="#"><i class="fa fa-flickr" data-toggle="tooltip"  title="Flickr" data-original-title="Flickr"></i></a>
+                      <a href="#"><i class="fa fa-skype" data-toggle="tooltip"  title="Skype" data-original-title="Skype"></i></a>
+                    </div> 
+                              
+                            </div>
+                    </div>
+                      </div>
+        </div>
+    </div>
+  </div>
+<!-- cards end -->
+<br><br>
+   <!--NEWSLETTER SECTION START -->
+   <div class="container item--wide scrollFade" id="newsletter">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+         <h1 class="text-center">
+            Subscribe Our Newsletter
+         </h1>
+         <p>Don't miss out on your discounts. Subscribe to our
+            email newsletter to get the best offers, discounts,
+            coupons,gifts and much more.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12  m-auto">
+            <form action="" class="d-flex">
+              <input type="email" name="" class="form-control" placeholder="Enter email here" id="">
+              <button  type="button" class="btn btn-dark">Subscribe</button>
+            </form>  
+          </div>
+    </div>
+</div>
+<br><br>
+<section id="footer"> 
+  <div class="container item--wide scrollFade" >
+      <div class="row">
+          <div class="col-lg-1">
+          <img src="images/main-logo.png" id="footer-logo" alt="logo">
+  </div>
+          <div class="col-lg-5 col-md-4 col-sm-4 col-12">
+              <p style="color: goldenrod;font-family: sans-serif; ">A biography is simply the story of a real person's life. It could be about a person who is still alive, someone who lived centuries ago, someone who is globally famous, an unsung hero forgotten by history, or even a unique group of people.</p>
+              
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 col-12">
+              <div class="row" >
+                  <h4>Useful Links</h4>
+  
+                  <div class="col-lg-6 col-md-12">
+                      <ul >
+                          <li><a href="#">Biography</a></li>
+                          <li><a href="#">Research</a></li>
+                          <li><a href="#">Achievements</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                      <ul>
+                          <li><a href="#">Books</a></li>
+                          <li><a href="#">Reference</a></li>
+                          <li><a href="#">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-4 col-12" id="social-links">
+                  <h4>Follow Us</h4>
+                  <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+                  <span><a href="#"><i class="fa fa-twitter"></i></a></span>
+                  <span><a href="#"><i class="fa fa-instagram"></i></a></span>
+                  <span><a href="#"><i class="fa fa-linkedin"></i></a></span>
+          </div>
+      </div>
+      <hr>
+      <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+              <p style="color: goldenrod;" >copyright @ 2022 - The Wishing Juniors <i class="fa fa-star"></i></p>
+          </div>
+      </div>
+  </div>
+  </section>
+<!-- FOOTER SECTION END -->
+<button style="margin-bottom: 80px !important; margin: right 13px !important; " class="btn btn-warning px-3 py-2 position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up"> <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+<script>
+  // ScrollFade 0.1
+
+var fadeElements = document.getElementsByClassName('scrollFade');
+
+function scrollFade() {
+	var viewportBottom = window.scrollY + window.innerHeight;
+
+	for (var index = 0; index < fadeElements.length; index++) {
+		var element = fadeElements[index];
+		var rect = element.getBoundingClientRect();
+
+		var elementFourth = rect.height/4;
+		var fadeInPoint = window.innerHeight - elementFourth;
+		var fadeOutPoint = -(rect.height/2);
+
+		if (rect.top <= fadeInPoint) {
+			element.classList.add('scrollFade--visible');
+			element.classList.add('scrollFade--animate');
+			element.classList.remove('scrollFade--hidden');
+		} else {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+
+		if (rect.top <= fadeOutPoint) {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+	}
+}
+
+document.addEventListener('scroll', scrollFade);
+window.addEventListener('resize', scrollFade);
+document.addEventListener('DOMContentLoaded', function() {
+    scrollFade();
+});
+  // top to bottom //
+
+window.onscroll = () =>
+{
+  toggleTopButton();
+}
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleTopButton(){
+  if(document.body.scrollTop>20||
+    document.documentElement.scrollTop>20
+    ){
+      document.getElementById('back-to-up').classList.remove('d-none');
+    }else{
+      document.getElementById('back-to-up').classList.add('d-none');
+    }
+}
+// top to bottom arrow end js //
+  // NAVBAR JS START
+var nav = document.querySelector('header');
+window.addEventListener('scroll', function () {
+if (window.pageYOffset > 100) {
+  nav.classList.add('bg-dark', 'shadow');
+} else {
+  nav.classList.remove('bg-dark', 'shadow');
+}
+})
+// NAVBAR JS END
+// theme change start//
+
+let b = document.getElementById("btnn");
+let bx = document.getElementById("box");
+btnn.addEventListener('click',function(){
+// box.style.cssText= "background-color:black; color:white" ;
+document.body.style.cssText= "background-color:black; color:white" ;
+});
+
+let B = document.getElementById("btnnn");
+let Bx = document.getElementById("box");
+btnnn.addEventListener('click',function(){
+// box.style.cssText= "background-color:black; color:white" ;
+document.body.style.cssText= "background-color:white; color: black;" ;
+});
+
+// theme change end//
+</script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

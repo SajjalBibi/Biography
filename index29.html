@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/main-logo.png">
+    <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style16.css">
+    <link rel="stylesheet" href="css/style10.css">
+    <title>Contact</title>
+</head>
+<style>
+    body{
+        background-color: rgba(218, 165, 32, 0.671);
+    }
+    input .form-control{
+        background: transparent;
+    }
+</style>
+<div class="loading">
+    <div class="image">
+    <img src="">    
+    </div>
+  </div>
+<body>
+    <!-- NAVBAR START -->
+    <header>
+        <a href="" class="logo"><img src="images/main-logo.png" id="logo" alt="logo"></a>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">Menu</label>
+         <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Biography</a>
+                <ul>
+                    <li><a href="index1.html">Most Famouse Scientits</a></li>
+                </ul>
+            </li>
+            <li><a href="index8.html">Research</a>
+            <ul>
+              <li><a href="index30.html">Award & Honour</a></li>
+            </ul>
+            </li>
+            <li><a href="index25.html">Achievement</a>
+            <ul>
+             <li><a href="index26.html">Working</a></li>
+             <!-- <li><a href="#">Working</a></li> -->
+            </ul>
+        </li>
+            <li><a href="index27.html">Books</a></li>
+            <li><a href="index28.html">Reference </a></li>
+            <li><a href="index29.html">Contact us </a></li>
+            <li><a href="#"><i class="fa fa-moon" onclick="btnclick()" id="btnn"></i> </a></li>
+            <li><a href="#"><i class="fa fa-sun" onclick="btnclick()" id="btnnn"></i> </a></li>
+
+          </ul>
+         </nav>
+    </header>
+    <!-- NAVBAR END -->
+    <br><br>
+
+    <div class="container-fluid item--wide scrollFade">
+
+        <form action="https://formsubmit.co/sawerachohan9@gmail.com" method="post" class="row g-3 needs-validation" novalidate>
+            <h1 class="text-center left">CONTACT US</h1>
+            <br><br><br>
+            <!-- <form action="https://formspree.io/f/xzbwqayp" method="POST"> -->
+                <!-- <form action="https://formsubmit.co/sawerachohan9@gmail.com" method="POST"> -->
+
+
+            <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" name="First Name" class="form-control" value="" id="validationCustom01" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" value="" name="Last Name" class="form-control" id="validationCustom02" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustomUsername" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text"  name="User Name" value="" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">City</label>
+                <input type="text" value="" name="City" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Please provide a valid city.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom04" class="form-label">select Country</label>
+                <select class="form-select" name="Seleted Country" id="validationCustom04" required>
+                    <option selected disabled value="India">choose</option>
+
+                    <option>Pakistan</option>
+                    <option>America</option>
+                    <option>Austrelia</option>
+                    <option>Newsiland</option>
+                    <option>Europe</option>
+                    <option>Afghanistan</option>
+                    <option>India</option>
+
+
+
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid state.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom05" class="form-label">Email</label>
+                <input type="email"  name="User Email" class="form-control" id="validationCustom05" required>
+                <div class="invalid-feedback">
+                    Please provide a valid email.
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" name="They agreed our terms and conditions" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-12">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-warning" id="submit" value="submit" type="submit">Submit form</button>
+                    <!-- <button type="submit">Send</button> -->
+                    <!-- <input type="submit" value="submit"> -->
+                </div>
+            </div>
+
+        </form>
+        </div>
+    <br><br>
+</form>
+
+    <div class="container mt-md-5 item--wide scrollFade">
+        <div class="row">
+            <div class="col-sm-3 col-md-3 col-lg-3 col-12">
+                <div class="counter-box">
+                    <i class="fa-brands fa-facebook-f 1" style="font-size:40px;color:rgb(0, 0, 0)"></i></i>
+                    <span2 class="counter" value="12500">12500</span2>
+                    <span2 class="label"><strong>Likes</strong></span2>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3 col-12">
+                <div class="counter-box">
+                    <i class="fa-brands fa-square-instagram " style="font-size:40px;color:rgb(0, 0, 0)"></i>
+                    <span2 class="counter" value="50000">50000</span2>
+                    <span2 class="label"><strong>Followers</strong></span2>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3 col-12">
+                <div class="counter-box">
+                    <i class="fa-brands fa-youtube" style="font-size:40px;color:rgb(0, 0, 0)"></i>
+                    <span2 class="counter" value="13600">13600</span2>
+                    <span2 class="label"><strong>Subscriber</strong></span2>
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-3 col-lg-3 col-12">
+                <div class="counter-box">
+
+                    <i class="fa-brands fa-square-twitter" style="font-size:40px;color:rgb(0, 0, 0)"></i>
+                    <span2 class="counter" value="167800">167800</span2>
+                    <span2 class="label"><strong>Likes</strong></span2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <div class="container item--wide scrollFade">
+
+        <div class="row">
+            <!-- <div class="col-4">
+
+            </div> -->
+            <div class="col-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57943.570068061345!2d67.08441615820314!3d24.813488599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33bd96c1293dd%3A0xbe9ac87e07e8709a!2sNoor%20Library%20Korangi%20(Online)!5e0!3m2!1sen!2s!4v1670787801552!5m2!1sen!2s" width="100%" height="400" style="border:1px solid rgb(197, 172, 5);"allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d57938.16920739052!2d67.11541759999999!3d24.8250368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1669037754278!5m2!1sen!2s"
+                   style="border:1px solid rgb(197, 172, 5);" allowfullscreen="" width="100%"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+            <!-- <div class="col-4">
+
+            </div> -->
+        </div>
+
+    </div>
+
+    <br><br>
+   <!--NEWSLETTER SECTION START -->
+   <div class="container item--wide scrollFade" id="newsletter">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+         <h1 class="text-center">
+            Subscribe Our Newsletter
+         </h1>
+         <p>Don't miss out on your discounts. Subscribe to our
+            email newsletter to get the best offers, discounts,
+            coupons,gifts and much more.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-12  m-auto">
+            <form action="" class="d-flex">
+              <input type="email" name="" class="form-control" placeholder="Enter email here" id="">
+              <button  type="button" class="btn btn-dark">Subscribe</button>
+            </form>  
+          </div>
+    </div>
+</div>
+<br><br>
+<section id="footer"> 
+    <div class="container item--wide scrollFade" >
+        <div class="row">
+            <div class="col-lg-1">
+            <img src="images/main-logo.png" id="footer-logo" alt="logo">
+    </div>
+            <div class="col-lg-5 col-md-4 col-sm-4 col-12">
+                <p style="color: goldenrod;font-family: sans-serif; ">A biography is simply the story of a real person's life. It could be about a person who is still alive, someone who lived centuries ago, someone who is globally famous, an unsung hero forgotten by history, or even a unique group of people.</p>
+                
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 col-12">
+                <div class="row" >
+                    <h4>Useful Links</h4>
+    
+                    <div class="col-lg-6 col-md-12">
+                        <ul >
+                            <li><a href="#">Biography</a></li>
+                            <li><a href="#">Research</a></li>
+                            <li><a href="#">Achievements</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <ul>
+                            <li><a href="#">Books</a></li>
+                            <li><a href="#">Reference</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-4 col-12" id="social-links">
+                    <h4>Follow Us</h4>
+                    <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+                    <span><a href="#"><i class="fa fa-twitter"></i></a></span>
+                    <span><a href="#"><i class="fa fa-instagram"></i></a></span>
+                    <span><a href="#"><i class="fa fa-linkedin"></i></a></span>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                <p style="color: goldenrod;" >copyright @ 2022 - The Wishing Juniors <i class="fa fa-star"></i></p>
+            </div>
+        </div>
+    </div>
+    </section>
+<!-- FOOTER SECTION END -->
+    <button style="margin-bottom: 80px !important; margin-right:13px !important; " class="btn btn-warning px-3 py-2 position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up"> <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+    <script>
+        // ScrollFade 0.1
+
+var fadeElements = document.getElementsByClassName('scrollFade');
+
+function scrollFade() {
+	var viewportBottom = window.scrollY + window.innerHeight;
+
+	for (var index = 0; index < fadeElements.length; index++) {
+		var element = fadeElements[index];
+		var rect = element.getBoundingClientRect();
+
+		var elementFourth = rect.height/4;
+		var fadeInPoint = window.innerHeight - elementFourth;
+		var fadeOutPoint = -(rect.height/2);
+
+		if (rect.top <= fadeInPoint) {
+			element.classList.add('scrollFade--visible');
+			element.classList.add('scrollFade--animate');
+			element.classList.remove('scrollFade--hidden');
+		} else {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+
+		if (rect.top <= fadeOutPoint) {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+	}
+}
+
+document.addEventListener('scroll', scrollFade);
+window.addEventListener('resize', scrollFade);
+document.addEventListener('DOMContentLoaded', function() {
+    scrollFade();
+});
+        // top to bottom //
+
+window.onscroll = () =>
+{
+  toggleTopButton();
+}
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleTopButton(){
+  if(document.body.scrollTop>20||
+    document.documentElement.scrollTop>20
+    ){
+      document.getElementById('back-to-up').classList.remove('d-none');
+    }else{
+      document.getElementById('back-to-up').classList.add('d-none');
+    }
+}
+// top to bottom arrow end js //
+        // NAVBAR JS START
+        var nav = document.querySelector('header');
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 100) {
+                nav.classList.add('bg-dark', 'shadow');
+            } else {
+                nav.classList.remove('bg-dark', 'shadow');
+            }
+        })
+        // NAVBAR JS END
+        // theme change start//
+
+        let b = document.getElementById("btnn");
+        let bx = document.getElementById("box");
+        btnn.addEventListener('click', function () {
+            // box.style.cssText= "background-color:black; color:white" ;
+            document.body.style.cssText = "background-color:black; color:white";
+        });
+
+        // theme change end//
+        // validation js
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        // conter js
+        var counter = document.querySelectorAll('.counter');
+        counter.forEach(counter => {
+            counter.innerHTML = '0';
+            function counterUpdate() {
+                var maxValue = parseInt(counter.getAttribute('value'));
+                var count = parseInt(counter.innerHTML);
+                var increment = maxValue / 500;
+                if (count < maxValue) {
+                    counter.innerHTML = Math.ceil(count + increment);
+                    setTimeout(counterUpdate, 1);
+                }
+                else {
+                    counter.innerHTML = maxValue;
+                }
+            }
+            counterUpdate();
+        });
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
